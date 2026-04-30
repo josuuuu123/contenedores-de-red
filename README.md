@@ -121,10 +121,10 @@ Levantar el contenedor de MySQL con las credenciales necesarias:
 ```bash
 docker run -d \
   --name mysql_server \
-  -e MYSQL_ROOT_PASSWORD=root123 \
-  -e MYSQL_DATABASE=testdb \
+  -e MYSQL_ROOT_PASSWORD= \
+  -e MYSQL_DATABASE= \
   -e MYSQL_USER=admin \
-  -e MYSQL_PASSWORD=admin123 \
+  -e MYSQL_PASSWORD= \
   -p 3306:3306 \
   mysql:8.0
 ```
@@ -145,7 +145,7 @@ Levantar el contenedor de phpMyAdmin, indicando como host el nombre del contened
 ```bash
 docker run -d \
   --name phpmyadmin_server \
-  -e PMA_HOST=mysql_server \
+  -e PMA_HOST= \
   -e PMA_PORT=3306 \
   -p 8080:80 \
   phpmyadmin:latest
